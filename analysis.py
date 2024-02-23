@@ -35,8 +35,10 @@ image_files = Path("data/jpg").glob("image_*.jpg")
 image_files = list(sorted(image_files))
 
 print("Loading images")
-images = [np.array(Image.open(file)) for file in image_files]
-histograms = [extract_histogram_features(image) for image in images]
+images = [np.array(Image.open(file)) for file in tqdm(image_files)]
+
+print("Calculating histograms")
+histograms = [extract_histogram_features(image) for image in tqdm(images)]
 
 print("Calculating distances.")
 chosen = histograms[CHOSEN_IMAGE]
