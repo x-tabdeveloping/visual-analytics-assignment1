@@ -105,9 +105,7 @@ def main():
     out_folder = Path(args.out_path)
     out_folder.mkdir(exist_ok=True)
     target_id = image_files[selected_image_idx].stem
-    out_file = out_folder.joinpath(
-        f"{target_id}_{args.representation}_{args.distance_metric}.csv"
-    )
+    out_file = out_folder.joinpath(f"{target_id}.csv")
     out_df.to_csv(out_file)
 
 
