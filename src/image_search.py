@@ -42,6 +42,11 @@ def make_parser() -> ArgumentParser:
         "--representation",
         default="hist",
     )
+    parser.add_argument(
+        "-k",
+        "--top_k",
+        default=5,
+    )
     parser.add_argument("-d", "--distance_metric", default="chisqr")
     return parser
 
@@ -88,7 +93,7 @@ def main():
     distances = np.array(
         [distance_metric(chosen, other) for other in tqdm(embeddings)]
     )
-    top_indices = np.argsort(distances)[: 5 + 1]
+    top_indices = np.argsort(distances)[: args.top_k + 1]
 
     print("Saving results.")
     out_df = pd.DataFrame(
