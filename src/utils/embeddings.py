@@ -1,7 +1,6 @@
 import numpy as np
 from PIL import Image
 from sklearn.base import TransformerMixin
-from sklearn.preprocessing import normalize
 from tensorflow.keras.applications.vgg16 import VGG16
 
 
