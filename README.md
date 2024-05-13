@@ -62,6 +62,10 @@ These are the results I got:
 |4|<img src="data/jpg/image_1078.jpg" alt="image_1078" width="200px">|191.69055452774253|
 |5|<img src="data/jpg/image_0319.jpg" alt="image_0319" width="200px">|191.8753821638015|
 
+As we can see many of the images barely resemble the original, and I would deem the performance of this method not satisfactory.
+The problem likely lies in the histograms being too sparse (`256*256*256` bins) and the exact same colors rarely occur in two different images.
+Increasing the size of the bins would likely yield much better results.
+
 ### VGG16 
 
 To use VGG16 image embeddings and cosine distance to search in the images run this command:
