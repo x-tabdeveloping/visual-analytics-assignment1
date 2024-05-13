@@ -80,7 +80,7 @@ This will put a CSV file with the images closest to the target cosine distance i
 
 | Argument                | Description                                                                                  | Type    | Default           |
 |-------------------------|----------------------------------------------------------------------------------------------|---------|-------------------|
-| `image_id`              | Identifier for the image.                                                                    |         | -                 |
+| `query_image_path`              | Path to query image.                                                                    |         | -                 |
 | `-h`, `--help`          | Show this help message and exit.                                                             |         |                   |
 | `-i IMAGES_PATH`,<br>`--images_path IMAGES_PATH` | Path to the source directory containing images.                                           | str     | `"data/jpg"`                 |
 | `-o OUT_PATH`,<br>`--out_path OUT_PATH` | Path to the output directory to save results.                                                | str     | `"out"`                 |
