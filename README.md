@@ -38,7 +38,7 @@ The CLI can use multiple distance metrics and types of latent representations to
 To do image retrieval based on minmax normalized color histograms, run the following:
 
 ```bash
-python3 src/image_search.py image_0001 -o "out/hist" -r "hist" -d "chisqr"
+python3 src/hist_search.py data/jpg/image_0001.jpg -o "out/hist"
 ```
 
 This will put a CSV file with the images closest to the target by Chi Square histogram distance in the `out/hist` folder.
@@ -51,23 +51,29 @@ This will put a CSV file with the images closest to the target by Chi Square his
 
 These are the results I got:
 
-|   | Filename               | Distance            |
-|---|------------------------|---------------------|
-| 0 | Target                 | 0.0                 |
-| 1 | data/jpg/image_0718.jpg | 15.246157334036242 |
-| 2 | data/jpg/image_1010.jpg | 20.437279080399684 |
-| 3 | data/jpg/image_0593.jpg | 20.51119057774688  |
-| 4 | data/jpg/image_0686.jpg | 22.747755263996137 |
-| 5 | data/jpg/image_0054.jpg | 23.153972570524715 |
+| |Filename|Distance|
+|-|-|-|
+| 0|image_0001.jpg|0.0|
+| 1|image_0773.jpg|190.13992491162105|
+| 2|image_1316.jpg|190.2249241130487|
+| 3|image_0740.jpg|190.62783760197846|
+| 4|image_1078.jpg|191.69055452774253|
+| 5|image_0319.jpg|191.8753821638015|
 
 ### VGG16 
 
-To use VGG16 image embeddings to search in the images run this command:
-
- > Remember to set the distance metric to cosine
+To use VGG16 image embeddings and cosine distance to search in the images run this command:
 
 ```bash
-python3 src/image_search.py image_0001 -o "out/vgg16" -r "vgg16" -d "cosine"
+python3 src/embedding_search.py data/jpg/image_0001.jpg -o "out/vgg16"
+```
+
+This will put a CSV file with the images closest to the target cosine distance in the `out/vgg16` folder.
+
+```
+ - out/
+    - vgg16/
+        - image_0001.csv
 ```
 
 ### Parameters
@@ -76,9 +82,7 @@ python3 src/image_search.py image_0001 -o "out/vgg16" -r "vgg16" -d "cosine"
 |-------------------------|----------------------------------------------------------------------------------------------|---------|-------------------|
 | `image_id`              | Identifier for the image.                                                                    |         | -                 |
 | `-h`, `--help`          | Show this help message and exit.                                                             |         |                   |
-| `-s SOURCE_PATH`,<br>`--source_path SOURCE_PATH` | Path to the source directory containing images.                                           | str     | `"data/jpg"`                 |
+| `-i IMAGES_PATH`,<br>`--images_path IMAGES_PATH` | Path to the source directory containing images.                                           | str     | `"data/jpg"`                 |
 | `-o OUT_PATH`,<br>`--out_path OUT_PATH` | Path to the output directory to save results.                                                | str     | `"out"`                 |
-| `-r REPRESENTATION`,<br>`--representation REPRESENTATION` | Type of representation to use for image features. (VGG16 or minmax normalized color histograms)                                         | `{"hist", "vgg16"}`     | `"hist"`                 |
 | `-k TOP_K`,<br>`--top_k TOP_K` | Top K similar images to retrieve.                                                             | int     | 5                 |
-| `-d DISTANCE_METRIC`,<br>`--distance_metric DISTANCE_METRIC` | Distance metric to use for similarity calculation. (Cosine or Chi square histogram distance)                                        | `{"cosine", "chisqr"}`     | `"chisqr"`                 |
 
