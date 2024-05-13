@@ -51,14 +51,14 @@ This will put a CSV file with the images closest to the target by Chi Square his
 
 These are the results I got:
 
-| |Filename|Distance|
+| |Image|Distance|
 |-|-|-|
-| 0|image_0001.jpg|0.0|
-| 1|image_0773.jpg|190.13992491162105|
-| 2|image_1316.jpg|190.2249241130487|
-| 3|image_0740.jpg|190.62783760197846|
-| 4|image_1078.jpg|191.69055452774253|
-| 5|image_0319.jpg|191.8753821638015|
+| 0|![image_0001](data/jpg/image_0001.jpg)|0.0|
+| 1|![image_0773](data/jpg/image_0773.jpg)|190.13992491162105|
+| 2|![image_1316](data/jpg/image_1316.jpg)|190.2249241130487|
+| 3|![image_0740](data/jpg/image_0740.jpg)|190.62783760197846|
+| 4|![image_1078](data/jpg/image_1078.jpg)|191.69055452774253|
+| 5|![image_0319](data/jpg/image_0319.jpg)|191.8753821638015|
 
 ### VGG16 
 
@@ -75,6 +75,15 @@ This will put a CSV file with the images closest to the target cosine distance i
     - vgg16/
         - image_0001.csv
 ```
+
+| |Image|Distance|
+|-|-|-|
+|0|![image_0001](data/jpg/image_0001.jpg)|1.369352364832821e-08|
+|1|![image_0049](data/jpg/image_0049.jpg)|0.00986799891034007|
+|2|![image_0072](data/jpg/image_0072.jpg)|0.010539749814202692|
+|3|![image_1050](data/jpg/image_1050.jpg)|0.010623027922563977|
+|4|![image_0018](data/jpg/image_0018.jpg)|0.011068601062943717|
+|5|![image_0020](data/jpg/image_0020.jpg)|0.011395322683994236|
 
 ### Parameters
 
