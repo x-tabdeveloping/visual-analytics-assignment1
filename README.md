@@ -53,14 +53,14 @@ This will put a CSV file with the images closest to the target by Chi Square his
 
 These are the results I got:
 
-| |Image|Distance|
+||Image|Distance|
 |-|-|-|
-| 0|![image_0001](data/jpg/image_0001.jpg)|0.0|
-| 1|![image_0773](data/jpg/image_0773.jpg)|190.13992491162105|
-| 2|![image_1316](data/jpg/image_1316.jpg)|190.2249241130487|
-| 3|![image_0740](data/jpg/image_0740.jpg)|190.62783760197846|
-| 4|![image_1078](data/jpg/image_1078.jpg)|191.69055452774253|
-| 5|![image_0319](data/jpg/image_0319.jpg)|191.8753821638015|
+|0|<img src="data/jpg/image_0001.jpg" alt="image_0001" width="200px">|0.0|
+|1|<img src="data/jpg/image_0773.jpg" alt="image_0773" width="200px">|190.13992491162105|
+|2|<img src="data/jpg/image_1316.jpg" alt="image_1316" width="200px">|190.2249241130487|
+|3|<img src="data/jpg/image_0740.jpg" alt="image_0740" width="200px">|190.62783760197846|
+|4|<img src="data/jpg/image_1078.jpg" alt="image_1078" width="200px">|191.69055452774253|
+|5|<img src="data/jpg/image_0319.jpg" alt="image_0319" width="200px">|191.8753821638015|
 
 ### VGG16 
 
@@ -80,12 +80,12 @@ This will put a CSV file with the images closest to the target cosine distance i
 
 | |Image|Distance|
 |-|-|-|
-|0|![image_0001](data/jpg/image_0001.jpg)|1.369352364832821e-08|
-|1|![image_0049](data/jpg/image_0049.jpg)|0.00986799891034007|
-|2|![image_0072](data/jpg/image_0072.jpg)|0.010539749814202692|
-|3|![image_1050](data/jpg/image_1050.jpg)|0.010623027922563977|
-|4|![image_0018](data/jpg/image_0018.jpg)|0.011068601062943717|
-|5|![image_0020](data/jpg/image_0020.jpg)|0.011395322683994236|
+|0|<img src="data/jpg/image_0001.jpg" alt="image_0001" width="200px">|1.369352364832821e-08|
+|1|<img src="data/jpg/image_0049.jpg" alt="image_0049" width="200px">|0.00986799891034007|
+|2|<img src="data/jpg/image_0072.jpg" alt="image_0072" width="200px">|0.010539749814202692|
+|3|<img src="data/jpg/image_1050.jpg" alt="image_1050" width="200px">|0.010623027922563977|
+|4|<img src="data/jpg/image_0018.jpg" alt="image_0018" width="200px">|0.011068601062943717|
+|5|<img src="data/jpg/image_0020.jpg" alt="image_0020" width="200px">|0.011395322683994236|
 
 ### Parameters
 
