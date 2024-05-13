@@ -15,6 +15,8 @@ In the examples I will use the following folder structure:
         ...
 ```
 
+ > Beware!! The data directory in the repo is only added for demonstration puposes and for including the example images in the README.
+
 The code ignore the `files.txt` file and scans the directory for all images.
 This choice was made so that the code is easily reusable in non-indexed image datasets.
 
